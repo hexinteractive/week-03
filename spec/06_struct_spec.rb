@@ -6,7 +6,7 @@
 # 
 # @see http://en.wikipedia.org/wiki/Batman
 
-Villian = Struct.new :name
+Villian = Struct.new :name, :nemesis
 Superhero = Struct.new :name, :origin, :nemesis
 AlterEgo = Struct.new :name, :superhero
 
@@ -29,7 +29,7 @@ describe Villian do
   #
   # @see https://www.relishapp.com/rspec/rspec-core/docs/subject/explicit-subject
   #
-  subject { Villian.new "Joker" }
+  subject { Villian.new "Joker", batman }
   
   
   it "should have the correct name" do
@@ -41,9 +41,9 @@ describe Villian do
   
   describe "nemesis" do
 
-    it "should_not respond_to? nemesis" do #TODO: is this the correct way to solve this?
+    it "should respond_to? nemesis" do #TODO: is this the correct way to solve this?
 
-      subject.should_not respond_to :nemesis
+      subject.should respond_to :nemesis
 
     end
     
