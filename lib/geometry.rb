@@ -22,7 +22,11 @@ end
 
 shapes = {
   :triangle => 3,
-  :square => 4
+  :square => 4,
+  :parallelogram => 4,
+  :rhombus => 4,
+  :pentagon => 5,
+  :nonagon => 9,
 }
 
 geo_quiz(shapes)
